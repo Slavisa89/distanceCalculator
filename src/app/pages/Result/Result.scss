@@ -1,0 +1,65 @@
+.result_holder{
+    .result_holder_item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .result_km{
+            color: #7786D2;
+            border-radius: 5px;
+            border: 1px solid #7786D2;
+            padding: 2px 10px;
+            transform: translateY(100%);
+
+            &.hidden{
+                visibility: hidden;
+                min-width: 78px;
+            }
+        }
+
+        .result_point_image{
+            width: 30px;
+            height: 30px;
+            background-color: #ffffff;
+            margin: 0 10px;
+    
+            background-image: url("../../assets/images/start.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 15px auto;
+    
+            &.destination{
+                background-image: url("../../assets/images/destination.svg");
+            }
+    
+            &.add{
+                background-image: url("../../assets/images/add.svg");
+            }
+    
+            &.remove_intermediate{
+               margin-left: 20px;
+               background-image: url("../../assets/images/remove.svg");
+               cursor: pointer;
+            }
+    
+            z-index: 10;
+        }
+    }
+
+    .info{
+        margin: 10px 0;
+
+        font-size: 14px;
+        text-align: center;
+        span{
+            color: #7786D2;
+            font-weight: 700;
+        }
+    }
+
+    .something_wrong{
+        color: #7786D2;
+        font-size: 16px;
+    }
+}

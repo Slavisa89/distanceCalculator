@@ -1,0 +1,117 @@
+.form-controll {
+  position: relative;
+  flex: 1;
+  label {
+    font-size: 12px;
+  }
+
+  .input_inside {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    height: 32px;
+    padding: 5px;
+    input {
+      height: 32px;
+      width: 100%;
+      box-sizing: border-box;
+      border: none;
+      background-color: transparent;
+      outline: none;
+    }
+
+    .remove_value {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 50%;
+      right: 10px;
+
+      transform: translateY(-50%);
+
+      background-image: url("../../assets/images/remove_input.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px auto;
+      cursor: pointer;
+    }
+  }
+
+  .error {
+    position: absolute;
+    color: #ff0000;
+    font-size: 12px;
+  }
+
+  .popover {
+    position: absolute;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 6px;
+    border: 1px solid #c7d1f4;
+
+    z-index: 10;
+
+    .popover_item {
+      display: flex;
+      height: 28px;
+      align-items: center;
+      padding: 0 6px;
+
+      border-radius: 6px;
+
+      &:hover {
+        background-color: #c7d1f4;
+      }
+
+      &.empty {
+        background-color: #c7d1f4;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &.error {
+    .input_inside {
+      border-color: #ff0000;
+    }
+
+    input {
+      color: #ff0000;
+    }
+  }
+}
+
+.flex-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .removeButton {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+
+    &.removeActivated{
+      right: 10px;
+    }
+
+    transform: translateY(calc(-50% - -7px));
+
+    &.p-button.p-button-sm {
+      font-size: 12px;
+      padding: 6px;
+
+      .p-button-label {
+        display: none;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,78 @@
+.holder {
+  position: relative;
+
+  .dots {
+    position: absolute;
+    width: 5px;
+    height: calc(100% - 60px);
+    left: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-image: url("../../assets/images/dots.svg");
+    background-repeat: repeat-y;
+    background-position: 3px 0px;
+  }
+}
+
+.home-holder {
+  display: flex;
+
+  .right {
+    margin-left: 70px;
+  }
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .item-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: #ffffff;
+
+    background-image: url("../../assets/images/start.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px auto;
+
+    &.destination {
+      background-image: url("../../assets/images/destination.svg");
+    }
+
+    &.add {
+      background-image: url("../../assets/images/add.svg");
+    }
+
+    &.remove_intermediate {
+      margin-left: 20px;
+      background-image: url("../../assets/images/remove.svg");
+      cursor: pointer;
+    }
+
+    z-index: 10;
+  }
+
+  &.add_item {
+    margin-top: 20px;
+    .add-button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .add_new_button {
+      width: 2rem;
+      height: 2.2rem !important;
+      margin-right: 10px;
+    }
+  }
+
+  .add_new {
+    color: #7786d2;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,23 @@
+.main_button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    .button{
+        display: inline-block;
+        padding: 9px 12px;
+        border-radius: 4px;
+        
+        background-color: #374151;
+        color: #E5E7EB;
+        cursor: pointer;
+    }
+
+    &.disabled{
+        .button{
+            background-color: #E5E7EB;
+            color: #ffffff;
+            cursor: default;
+        }
+    }
+    
+}
